@@ -47,6 +47,12 @@ a {
      return {
        titulo: this.$route.meta.meutitulo
      }
+    },
+    watch: {
+      $route(to, from) {
+        console.log(to)
+        console.log(from)
+      }
     }
   }
 </script>
