@@ -1,5 +1,7 @@
 <template>
   <v-container fluid>
+    <h1>{{ titulo }}</h1>
+    <h2>{{ meutitulo }}</h2>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
         <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
@@ -18,7 +20,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
@@ -33,3 +36,17 @@ a {
   color: #42b983;
 }
 </style>
+
+<script>
+  export default {
+    props: ['meutitulo'],
+    mounted: function (){
+      console.log(this.$route)
+    },
+    data: function () {
+     return {
+       titulo: this.$route.meta.meutitulo
+     }
+    }
+  }
+</script>
