@@ -7,12 +7,9 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/:titulo',
+      path: '/helloRoute/:meutitulo',
       name: 'HelloWorld',
-      component: HelloWorld,
-      meta : {
-        meutitulo: 'adasdasdasdsad'
-      }
+      component: HelloWorld
     }
   ]
 })

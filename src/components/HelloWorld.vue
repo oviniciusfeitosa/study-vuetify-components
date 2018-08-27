@@ -1,7 +1,6 @@
 <template>
   <v-container fluid>
     <h1>{{ titulo }}</h1>
-    <h2>{{ meutitulo }}</h2>
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
         <img src="@/assets/logo.png" alt="Vuetify.js" class="mb-5">
@@ -39,20 +38,25 @@ a {
 
 <script>
   export default {
-    props: ['meutitulo'],
     mounted: function (){
       console.log(this.$route)
     },
     data: function () {
      return {
-       titulo: this.$route.meta.meutitulo
+       titulo: this.$route.params.meutitulo
      }
     },
-    watch: {
-      $route(to, from) {
-        console.log(to)
-        console.log(from)
-      }
-    }
+    // watch: {
+    //   $route(to, from) {
+    //     this.redirecionar(to)
+    //     // console.log(from)
+    //     // console.log(param3)
+    //   }
+    // },
+    // methods: {
+    //   redirecionar(route) {
+    //     this.$route.push(route)
+    //   }
+    // }
   }
 </script>
