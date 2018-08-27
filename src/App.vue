@@ -78,7 +78,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       clipped: false,
       drawer: false,
@@ -90,27 +90,27 @@ export default {
           to: '/login'
         },
         {
-          icon: "bubble_chart",
-          title: "1- Testando Rotas",
-          to: "/helloRoute/Testando Rotas"
+          icon: 'bubble_chart',
+          title: '1- Testando Rotas',
+          to: '/helloRoute/Testando Rotas'
         },
         {
-          icon: "bubble_chart",
-          title: "2- Testando Tabs",
-          to: "/tabs"
+          icon: 'bubble_chart',
+          title: '2- Testando Tabs',
+          to: '/tabs'
         },
         {
-          icon: "bubble_chart",
-          title: "3- Testando Axios",
-          to: "/rota-axios"
-        },
+          icon: 'bubble_chart',
+          title: '3- Testando Axios',
+          to: '/rota-axios'
+        }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: "Vuetify.js"
-    };
+      title: 'Vuetify.js'
+    }
   },
-  name: "App"
-};
+  name: 'App'
+}
 </script>

@@ -37,26 +37,26 @@ a {
 </style>
 
 <script>
-  export default {
-    mounted: function (){
-      console.log(this.$route)
-    },
-    data: function () {
-     return {
-       titulo: this.$route.params.meutitulo
-     }
-    },
-    // watch: {
-    //   $route(to, from) {
-    //     this.redirecionar(to)
-    //     // console.log(from)
-    //     // console.log(param3)
-    //   }
-    // },
-    // methods: {
-    //   redirecionar(route) {
-    //     this.$route.push(route)
-    //   }
-    // }
+export default {
+  mounted () {
+    console.log(this.$route)
+  },
+  data () {
+    return {
+      titulo: this.$route.params.meutitulo
+    }
   }
+  // watch: {
+  //   $route(to, from) {
+  //     this.redirecionar(to)
+  //     // console.log(from)
+  //     // console.log(param3)
+  //   }
+  // },
+  // methods: {
+  //   redirecionar(route) {
+  //     this.$route.push(route)
+  //   }
+  // }
+}
 </script>
