@@ -8,6 +8,7 @@
       enable-resize-watcher
       fixed
       app
+      dark
     >
       <v-list>
         <v-list-tile
@@ -15,15 +16,14 @@
           v-for="(item, i) in items"
           :key="i"
         >
-          <v-list-tile-action>
-            <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
             <router-link tag="li" :to="{ path : item.route }">
-              <a>
-                <v-list-tile-title v-text="item.title"></v-list-tile-title>
-              </a>
+                <a><v-list-tile-action>
+            <v-icon v-html="item.icon"></v-icon>
+          </v-list-tile-action></a>
             </router-link>
+          
+          <v-list-tile-content>
+                <v-list-tile-title v-text="item.title"></v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -75,22 +75,24 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       clipped: false,
       drawer: true,
       fixed: false,
-      items: [{
-        icon: 'bubble_chart',
-        title: 'Testando Rotas',
-        route: '/helloRoute/Testando Rotas'
-      }],
-      miniVariant: false,
+      items: [
+        {
+          icon: "bubble_chart",
+          title: "Testando Rotas",
+          route: "/helloRoute/Testando Rotas"
+        }
+      ],
+      miniVariant: true,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
-    }
+      title: "Vuetify.js"
+    };
   },
-  name: 'App'
-}
+  name: "App"
+};
 </script>
