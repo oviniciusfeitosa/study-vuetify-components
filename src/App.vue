@@ -15,12 +15,11 @@
           value="true"
           v-for="(item, i) in items"
           :key="i"
+          :to="item.to"
         >
-            <router-link tag="li" :to="{ path : item.route }">
-                <a><v-list-tile-action>
+          <v-list-tile-action>
             <v-icon v-html="item.icon"></v-icon>
-          </v-list-tile-action></a>
-            </router-link>
+          </v-list-tile-action>
           
           <v-list-tile-content>
                 <v-list-tile-title v-text="item.title"></v-list-tile-title>
@@ -84,7 +83,7 @@ export default {
         {
           icon: "bubble_chart",
           title: "Testando Rotas",
-          route: "/helloRoute/Testando Rotas"
+          to: "/helloRoute/Testando Rotas"
         }
       ],
       miniVariant: true,
