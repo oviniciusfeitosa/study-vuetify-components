@@ -85,6 +85,11 @@ export default {
       fixed: false,
       items: [
         {
+          icon: 'vpn_key',
+          title: 'Login',
+          to: '/login'
+        },
+        {
           icon: "bubble_chart",
           title: "1- Testando Rotas",
           to: "/helloRoute/Testando Rotas"
@@ -95,9 +100,9 @@ export default {
           to: "/tabs"
         },
         {
-          icon: 'vpn_key',
-          title: 'Login',
-          to: '/login'
+          icon: "bubble_chart",
+          title: "3- Testando Axios",
+          to: "/rota-axios"
         },
       ],
       miniVariant: false,
