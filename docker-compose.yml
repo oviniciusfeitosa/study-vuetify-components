@@ -1,0 +1,29 @@
+version: '2'
+services:
+
+  webapp-service:
+    image: node:9
+    container_name: vuetify-webapp
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - .:/home/node/app
+    command:
+      sh -c 'npm i && npm run serve'
+    ports:
+      - "8080:8080"
+
+  database-service:
+    image: postgres:10
+    container_name: vuetify-database
+    environment:
+      - POSTGRES_PASSWORD=senhaNotificacao
+      - POSTGRES_USER=notificacao
+      - POSTGRES_DB=notificacao
+      - POSTGRES_DB_TEST=notificacao-test
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/docker-data/postgresql:/var/lib/postgresql
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/0.schema.sql
+      - ./database/initial-data.sql:/docker-entrypoint-initdb.d/1.data.sql
